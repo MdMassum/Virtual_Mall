@@ -4,10 +4,12 @@ const bodyparser = require('body-parser');
 const errorMiddleware = require('./middleware/error')
 const products = require("./routes/productRoute")
 const users = require("./routes/userRoute")
+const cookieParser = require('cookie-parser')
 
 // to access req.body
 app.use(bodyparser.json());
 app.use(express.json());
+app.use(cookieParser());
 
 
 //available routes

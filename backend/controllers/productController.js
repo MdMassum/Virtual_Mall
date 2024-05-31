@@ -5,6 +5,10 @@ const ApiFeatures = require('../utils/apiFeatures')
 
 // for creating product
 exports.createProduct = catchAsyncError(async(req,res) =>{
+
+    // assigning value of req.body.user as the id of loggedin user (i.e id of logged in user will be req.user.id)
+    req.body.user = req.user.id;
+    
     let product = await Product.create(req.body)
     res.status(201).json({
         success:true,
