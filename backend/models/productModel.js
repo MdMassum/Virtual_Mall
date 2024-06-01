@@ -15,9 +15,9 @@ const productSchema = new mongoose.Schema({
         required:[true,"Please Enter Product Price"],
         maxLength:[8,"Price cannot exceed 8 digit"]
     },
-    rating:{
+    ratings:{
         type:Number,
-        defaul:0,
+        default:0,
     },
     images:[
         {
@@ -47,6 +47,11 @@ const productSchema = new mongoose.Schema({
     },
     reviews:[
         {
+            user:{  // this store the user who will create the particular product or map
+                type:mongoose.Schema.ObjectId,
+                ref : "User",
+                required:true,
+            },
             name:{
                 type:String,
                 required:true
