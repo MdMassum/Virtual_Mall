@@ -1,0 +1,47 @@
+.banner{
+    height:100vmin;
+    background-image:linear-gradient(to right,rgb(255, 179, 191),rgb(136, 136, 255));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h4{
+    color:black;
+
+}
+h1{
+    margin:4vmax;
+    font:700 2.5vmax;
+    color:black;
+}
+button{
+    padding:0.5vmax 2vmax;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+a :hover{
+    background-color:purple;
+    color:white;
+}
+.banner::after{
+    content:"";
+    width:100vw;
+    height:100vmin;
+    background-color: white;
+    clip-path: polygon(0 95%, 100% 64%, 100% 100%, 0 100%);
+    position:absolute;
+}
+.HomeHeading{
+    color:rgb(27, 26, 26);
+    font-size: 2.3vmax;
+    text-align: center;
+    margin:auto;
+    width:25vmax;
+    padding:1vmax;
+    border-bottom:2px solid grey;
+    margin-bottom:5vmax;
+}
